@@ -1,136 +1,136 @@
-\# Virtual Bookstore Platform
+# Virtual Bookstore Platform
 
 
 
-A full-stack virtual bookstore application built with \*\*Spring Boot\*\*, \*\*React\*\*, \*\*MySQL\*\*, \*\*Redis\*\*, \*\*JWT Authentication\*\*, and \*\*WebSocket notifications\*\*. The system supports book browsing, user authentication, cart management, order placement, reviews, notifications, and an admin dashboard for managing books, users, orders, and analytics.
+A full-stack virtual bookstore application built with **Spring Boot**, **React**, **MySQL**, **Redis**, **JWT Authentication**, and **WebSocket notifications**. The system supports book browsing, user authentication, cart management, order placement, reviews, notifications, and an admin dashboard for managing books, users, orders, and analytics.
 
 
 
-\---
+---
 
 
 
-\## Features
+## Features
 
 
 
-\### User Features
+### User Features
 
-\- User registration and login with JWT authentication
+- User registration and login with JWT authentication
 
-\- Browse books with pagination and sorting
+- Browse books with pagination and sorting
 
-\- Search books by title, author, category, and price range
+- Search books by title, author, category, and price range
 
-\- View book details and reviews
+- View book details and reviews
 
-\- Add books to cart
+- Add books to cart
 
-\- Update cart quantity and remove items
+- Update cart quantity and remove items
 
-\- Place orders from cart
+- Place orders from cart
 
-\- View order history and order details
+- View order history and order details
 
-\- Add and delete book reviews
+- Add and delete book reviews
 
-\- Receive notifications
+- Receive notifications
 
 
 
-\### Admin Features
+### Admin Features
 
-\- Admin login with role-based access
+- Admin login with role-based access
 
-\- Dashboard analytics
+- Dashboard analytics
 
-\- Manage users
+- Manage users
 
-\- Activate/deactivate user accounts
+- Activate/deactivate user accounts
 
-\- Manage books: create, update, soft delete
+- Manage books: create, update, soft delete
 
-\- View and update orders
+- View and update orders
 
-\- View low-stock books
+- View low-stock books
 
-\- Send broadcast notifications
+- Send broadcast notifications
 
 
 
-\### Backend Features
+### Backend Features
 
-\- REST API with Spring Boot
+- REST API with Spring Boot
 
-\- JWT-based authentication and authorization
+- JWT-based authentication and authorization
 
-\- Role-based access control
+- Role-based access control
 
-\- MySQL database with JPA/Hibernate
+- MySQL database with JPA/Hibernate
 
-\- Redis caching
+- Redis caching
 
-\- WebSocket support
+- WebSocket support
 
-\- Swagger/OpenAPI documentation
+- Swagger/OpenAPI documentation
 
-\- Centralized exception handling
+- Centralized exception handling
 
 
 
-\---
+---
 
 
 
-\## Tech Stack
+## Tech Stack
 
 
 
-\### Frontend
+### Frontend
 
-\- React 18
+- React 18
 
-\- React Router DOM
+- React Router DOM
 
-\- Axios
+- Axios
 
-\- Tailwind CSS
+- Tailwind CSS
 
-\- SockJS
+- SockJS
 
-\- STOMP WebSocket Client
+- STOMP WebSocket Client
 
 
 
-\### Backend
+### Backend
 
-\- Java 17
+- Java 17
 
-\- Spring Boot 3
+- Spring Boot 3
 
-\- Spring Security
+- Spring Security
 
-\- Spring Data JPA
+- Spring Data JPA
 
-\- MySQL
+- MySQL
 
-\- Redis
+- Redis
 
-\- JWT
+- JWT
 
-\- WebSocket
+- WebSocket
 
-\- Swagger / OpenAPI
+- Swagger / OpenAPI
 
-\- Maven
+- Maven
 
 
 
-\---
+---
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -167,64 +167,64 @@ virtual-bookstore/
 ├── README.md
 
 └── .gitignore
+```
+
+
+## Screenshots
 
 
 
-\## Screenshots
+### Homepage
 
 
 
-\### Homepage
+![Homepage](https://github.com/Sara-kr/virtual-bookstore/blob/main/docs/screenshots/homepage.png)
 
 
 
-!\[Homepage](docs/screenshots/homepage.png)
+### Login Page
 
 
 
-\### Login Page
+![Login Page](docs/screenshots/loginpage.png)
 
 
 
-!\[Login Page](docs/screenshots/loginpage.png)
+### Dashboard
 
 
 
-\### Dashboard
+![Dashboard](docs/screenshots/dashboard.png)
 
 
 
-!\[Dashboard](docs/screenshots/dashboard.png)
+### Book Card / Cart View
 
 
 
-\### Book Card / Cart View
+![Book Card](docs/screenshots/card.png)
 
 
 
-!\[Book Card](docs/screenshots/card.png)
+## Backend Setup
 
 
 
-\## Backend Setup
+### Prerequisites
 
 
 
-\### Prerequisites
+- Java 17 or higher
+
+- Maven
+
+- MySQL
+
+- Redis
 
 
 
-\- Java 17 or higher
-
-\- Maven
-
-\- MySQL
-
-\- Redis
-
-
-
-\### Database Setup
+### Database Setup
 
 
 
@@ -234,7 +234,7 @@ Create a MySQL database:
 
 ```sql
 
-CREATE DATABASE virtual\_bookstore;
+CREATE DATABASE virtual_bookstore;
 
 ```
 
@@ -254,11 +254,11 @@ Recommended configuration:
 
 ```properties
 
-spring.datasource.url=jdbc:mysql://localhost:3306/virtual\_bookstore?createDatabaseIfNotExist=true\&useSSL=false\&serverTimezone=UTC\&allowPublicKeyRetrieval=true
+spring.datasource.url=jdbc:mysql://localhost:3306/virtual_bookstore?createDatabaseIfNotExist=true\&useSSL=false\&serverTimezone=UTC\&allowPublicKeyRetrieval=true
 
-spring.datasource.username=${DB\_USERNAME:root}
+spring.datasource.username=${DB_USERNAME:root}
 
-spring.datasource.password=${DB\_PASSWORD:}
+spring.datasource.password=${DB_PASSWORD:}
 
 app.jwt.secret=${JWT\_SECRET:changeThisSecretBeforeProductionChangeThisSecretBeforeProduction}
 
@@ -266,7 +266,7 @@ app.jwt.secret=${JWT\_SECRET:changeThisSecretBeforeProductionChangeThisSecretBef
 
 
 
-\### Run Backend
+### Run Backend
 
 
 
@@ -292,15 +292,15 @@ http://localhost:8080
 
 
 
-\---
+---
 
 
 
-\## Frontend Setup
+## Frontend Setup
 
 
 
-\### Install Dependencies
+### Install Dependencies
 
 
 
@@ -314,7 +314,7 @@ npm install
 
 
 
-\### Environment Variables
+### Environment Variables
 
 
 
@@ -324,15 +324,16 @@ Create a `.env` file inside the frontend folder:
 
 ```env
 
-REACT\_APP\_API\_URL=http://localhost:8080
+REACT_APP_API_URL=http://localhost:8080
 
-REACT\_APP\_WS\_URL=http://localhost:8080/ws
+REACT_APP_WS<img width="1914" height="910" alt="homepage" src="https://github.com/user-attachments/assets/02cda614-5b19-4e20-bc8f-e757228f082a" />
+_URL=http://localhost:8080/ws
 
 ```
 
 
 
-\### Run Frontend
+### Run Frontend
 
 
 
@@ -356,11 +357,11 @@ http://localhost:3000
 
 
 
-\---
+---
 
 
 
-\## API Documentation
+## API Documentation
 
 
 
@@ -400,11 +401,11 @@ http://localhost:8080/actuator/health
 
 
 
-\---
+---
 
 
 
-\## Authentication
+## Authentication
 
 
 
@@ -419,12 +420,11 @@ After login, the backend returns:
 ```json
 
 {
+ "accessToken": "JWT\_ACCESS\_TOKEN",
 
-&#x20; "accessToken": "JWT\_ACCESS\_TOKEN",
+ "refreshToken": "JWT\_REFRESH\_TOKEN",
 
-&#x20; "refreshToken": "JWT\_REFRESH\_TOKEN",
-
-&#x20; "tokenType": "Bearer"
+ "tokenType": "Bearer"
 
 }
 
@@ -438,7 +438,7 @@ Use the access token in protected APIs:
 
 ```http
 
-Authorization: Bearer JWT\_ACCESS\_TOKEN
+Authorization: Bearer JWT_ACCESS_TOKEN
 
 ```
 
@@ -450,17 +450,17 @@ Use the refresh token only with:
 
 ```http
 
-POST /api/auth/refresh?refreshToken=JWT\_REFRESH\_TOKEN
+POST /api/auth/refresh?refreshToken=JWT_REFRESH_TOKEN
 
 ```
 
 
 
-\---
+---
 
 
 
-\## Default Credentials
+## Default Credentials
 
 
 
@@ -468,7 +468,7 @@ The backend seeds default users during startup.
 
 
 
-\### Admin
+### Admin
 
 
 
@@ -482,7 +482,7 @@ Password: Admin@1234
 
 
 
-\### Test User
+### Test User
 
 
 
@@ -496,15 +496,15 @@ Password: User@1234
 
 
 
-\---
+---
 
 
 
-\## Main API Endpoints
+## Main API Endpoints
 
 
 
-\### Authentication
+### Authentication
 
 
 
@@ -520,7 +520,7 @@ POST /api/auth/refresh?refreshToken={refreshToken}
 
 
 
-\### Books
+### Books
 
 
 
@@ -548,7 +548,7 @@ DELETE /api/books/{id}
 
 
 
-\### Users
+### Users
 
 
 
@@ -564,7 +564,7 @@ PUT /api/users/me/password
 
 
 
-\### Cart
+### Cart
 
 
 
@@ -584,7 +584,7 @@ DELETE /api/cart/clear
 
 
 
-\### Orders
+### Orders
 
 
 
@@ -606,7 +606,7 @@ PUT    /api/orders/{orderId}/status?status={status}
 
 
 
-\### Reviews
+### Reviews
 
 
 
@@ -622,7 +622,7 @@ DELETE /api/reviews/{reviewId}
 
 
 
-\### Notifications
+### Notifications
 
 
 
@@ -640,7 +640,7 @@ PUT /api/notifications/{id}/read
 
 
 
-\### Admin
+### Admin
 
 
 
@@ -660,11 +660,11 @@ GET  /api/admin/low-stock
 
 
 
-\---
+---
 
 
 
-\## Testing Status
+## Testing Status
 
 
 
@@ -672,31 +672,31 @@ The major backend APIs were tested successfully, including:
 
 
 
-\- Authentication APIs
+- Authentication APIs
 
-\- Book listing and search APIs
+- Book listing and search APIs
 
-\- Cart APIs
+- Cart APIs
 
-\- Order APIs
+- Order APIs
 
-\- Review APIs
+- Review APIs
 
-\- Notification APIs
+- Notification APIs
 
-\- Admin dashboard APIs
+- Admin dashboard APIs
 
-\- Book management APIs
+- Book management APIs
 
-\- Order status update APIs
-
-
-
-\---
+- Order status update APIs
 
 
 
-\## Known Improvement
+---
+
+
+
+## Known Improvement
 
 
 
@@ -704,37 +704,37 @@ Soft-deleted books should be excluded from all public book listing APIs.
 
 
 
-\---
+---
 
 
 
-\## Future Improvements
+## Future Improvements
 
 
 
-\- Payment gateway integration
+- Payment gateway integration
 
-\- Email notifications
+- Email notifications
 
-\- Advanced admin analytics
+- Advanced admin analytics
 
-\- Product image upload
+- Product image upload
 
-\- Wishlist feature
+- Wishlist feature
 
-\- Docker Compose setup
+- Docker Compose setup
 
-\- GitHub Actions CI/CD pipeline
+- GitHub Actions CI/CD pipeline
 
-\- Deployment to cloud platform
-
-
-
-\---
+- Deployment to cloud platform
 
 
 
-\## Author
+---
+
+
+
+## Author
 
 
 
